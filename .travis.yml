@@ -1,7 +1,7 @@
 sudo: required
 language: csharp
 dist: xenial
-solution: digipost-api-client.sln
+solution: digipost-data-types-dotnet.sln
 
 git:
   submodules: false
