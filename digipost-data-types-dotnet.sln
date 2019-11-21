@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digipost.Api.Client.DataTypes", "Digipost.Api.Client.DataTypes\Digipost.Api.Client.DataTypes.csproj", "{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digipost.Api.Client.DataTypes.Tests", "Digipost.Api.Client.DataTypes.Tests\Digipost.Api.Client.DataTypes.Tests.csproj", "{8814CB98-13B3-4CDF-A081-D1470F80D38B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+								{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+								{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+								{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}.Release|Any CPU.Build.0 = Release|Any CPU
+								{8814CB98-13B3-4CDF-A081-D1470F80D38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+								{8814CB98-13B3-4CDF-A081-D1470F80D38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+								{8814CB98-13B3-4CDF-A081-D1470F80D38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+								{8814CB98-13B3-4CDF-A081-D1470F80D38B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
