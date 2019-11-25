@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using Digipost.Api.Client.DataTypes.Core;
 using Digipost.Api.Client.DataTypes.Utils;
 using Digipost.Api.Client.Shared.Resources.Resource;
 using Digipost.Api.Client.Shared.Resources.Xml;
@@ -21,11 +22,11 @@ namespace Digipost.Api.Client.DataTypes.Tests
         public DataTypesTests()
         {
             ResourceUtility resourceUtility = new ResourceUtility(
-                typeof(GenerationUtil).Assembly, "Digipost.Api.Client.DataTypes.Utils.Resources.XSD");
+                typeof(ExternalLink).Assembly, "Digipost.Api.Client.DataTypes.Core.Resources.XSD");
             var bytes = resourceUtility.ReadAllBytes("datatypes.xsd");
             
             ResourceUtility resourceUtilityXml = new ResourceUtility(
-                typeof(GenerationUtil).Assembly, "Digipost.Api.Client.DataTypes.Utils.Resources.XML");
+                typeof(ExternalLink).Assembly, "Digipost.Api.Client.DataTypes.Core.Resources.XML");
             var bytesXml = resourceUtilityXml.ReadAllBytes("datatypes-examples.xml");
             
             var xsdDocument = XmlUtility.ToXmlDocument(Encoding.UTF8.GetString(bytes));

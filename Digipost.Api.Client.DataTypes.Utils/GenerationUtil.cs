@@ -23,7 +23,7 @@ namespace Digipost.Api.Client.DataTypes.Utils
                 }.ToNamespaceProvider(new GeneratorConfiguration{ NamespacePrefix = "DataTypes" }.NamespaceProvider.GenerateNamespace)
             };
             
-            generator.Generate(new List<string>{ "Resources/XSD/datatypes.xsd" });
+            generator.Generate(new List<string>{ "../Digipost.Api.Client.DataTypes.Core/Resources/XSD/datatypes.xsd" });
         }
     }
 }

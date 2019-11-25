@@ -50,21 +50,6 @@
             <Link>signingkey.snk</Link>
         </None>
     </ItemGroup>
-
-    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-        <None Update="Resources/XSD/*" />
-        <None Update="Resources/XML/*" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Remove="Resources/XSD/*" />
-        <None Remove="Resources/XML/*" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <EmbeddedResource Include="Resources/XSD/*" />
-        <EmbeddedResource Include="Resources/XML/*" />
-    </ItemGroup>
     
     <PropertyGroup>
         <OutputType>Exe</OutputType>

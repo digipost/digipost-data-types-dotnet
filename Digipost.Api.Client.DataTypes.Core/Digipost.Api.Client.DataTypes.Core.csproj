@@ -38,6 +38,22 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Digipost.Api.Client.Shared" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+        <None Update="Resources/XSD/*" />
+        <None Update="Resources/XML/*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resources/XSD/*" />
+        <None Remove="Resources/XML/*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Resources/XSD/*" />
+        <EmbeddedResource Include="Resources/XML/*" />
     </ItemGroup>
     
     <ItemGroup>

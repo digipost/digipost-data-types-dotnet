@@ -8,7 +8,7 @@ namespace Digipost.Api.Client.DataTypes.Tests
 {
     public class DataTypesXmlValidator : XmlValidator
     {
-        private static readonly ResourceUtility DataTypesResourceUtility = new ResourceUtility(Assembly.Load("Digipost.Api.Client.DataTypes.Utils"), "Digipost.Api.Client.DataTypes.Utils.Resources.XSD");
+        private static readonly ResourceUtility DataTypesResourceUtility = new ResourceUtility(Assembly.Load("Digipost.Api.Client.DataTypes.Core"), "Digipost.Api.Client.DataTypes.Core.Resources.XSD");
         
         public DataTypesXmlValidator()
         {
