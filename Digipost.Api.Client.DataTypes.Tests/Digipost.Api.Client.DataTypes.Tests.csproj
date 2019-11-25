@@ -1,6 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="Build">
 
     <PropertyGroup>
+        <Title>Digipost Api Client DataTypes Tests</Title>
+        <PackageId>Digipost.Api.Client.DataTypes.Tests</PackageId>
+    </PropertyGroup>
+    
+    <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Tests</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Tests</AssemblyName>
@@ -28,25 +33,25 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
         <NoWarn>1591</NoWarn>
-        <DocumentationFile>bin\Release\Digipost.Api.Client.XML</DocumentationFile>
+        <DocumentationFile>bin\Release\Digipost.Api.Client.DataTypes.Tests.XML</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BouncyCastle" Version="1.8.5" />
-        <PackageReference Include="Difi.Felles.Utility" Version="3.0.2" />
         <PackageReference Include="Digipost.Api.Client.Shared" Version="5.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+        <PackageReference Include="Moq" Version="4.13.1" />
+        <PackageReference Include="Tynamix.ObjectFiller" Version="1.5.5" />
         <PackageReference Include="xunit.abstractions" Version="2.0.3" />
         <PackageReference Include="xunit.assert" Version="2.4.1" />
         <PackageReference Include="xunit.core" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-        <ProjectReference Include="..\Digipost.Api.Client.DataTypes\Digipost.Api.Client.DataTypes.csproj">
+        <ProjectReference Include="..\Digipost.Api.Client.DataTypes.Core\Digipost.Api.Client.DataTypes.Core.csproj">
             <Project>{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}</Project>
-            <Name>Digipost.Api.Client.DataTypes</Name>
+            <Name>Digipost.Api.Client.DataTypes.Core</Name>
         </ProjectReference>
-        <ProjectReference Include="..\Digipost.Api.Client.Tests\Digipost.Api.Client.Tests.csproj">
-            <Project>{966A701B-7E91-4C41-BA28-B5C5E800E63D}</Project>
-            <Name>Digipost.Api.Client.Tests</Name>
+        <ProjectReference Include="..\Digipost.Api.Client.DataTypes.Utils\Digipost.Api.Client.DataTypes.Utils.csproj">
+            <Project>{A6CC23AB-6E38-42D1-9DDE-854AFB428E05}</Project>
+            <Name>Digipost.Api.Client.DataTypes.Utils</Name>
         </ProjectReference>
     </ItemGroup>
     

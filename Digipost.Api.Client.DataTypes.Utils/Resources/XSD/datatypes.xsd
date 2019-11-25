@@ -5,8 +5,6 @@
 
   <xs:element name="boligdetaljer" type="tns:boligdetaljer"/>
 
-  <xs:element name="category" type="tns:category"/>
-
   <xs:element name="event" type="tns:event"/>
 
   <xs:element name="externalLink" type="tns:externalLink"/>
@@ -141,10 +139,6 @@
       <xs:element minOccurs="0" name="button-text" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
-
-  <xs:simpleType name="category">
-    <xs:restriction base="xs:string"/>
-  </xs:simpleType>
 
   <xs:complexType final="extension restriction" name="event">
     <xs:sequence>

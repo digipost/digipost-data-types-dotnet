@@ -10,20 +10,20 @@ namespace Digipost.Api.Client.DataTypes.Utils
         {
             Generator generator = new Generator
             {
-                OutputFolder = "/Users/aaronzachariaharrick/digipost/digipost-api-client-dotnet/Digipost.Api.Client.DataTypes",
+                OutputFolder = "../Digipost.Api.Client.DataTypes.Core/",
                 Log = s => Console.Out.WriteLine(s),
                 GenerateNullables = true,
                 DisableComments = true,
                 GenerateInterfaces = true,
+                OutputWriter = new SingleFileOutputWriter("../Digipost.Api.Client.DataTypes.Core/") { OutputFile = "DataTypes.cs"},
                 GenerateComplexTypesForCollections = true,
                 NamespaceProvider = new Dictionary<NamespaceKey, string>
                 {
-                    { new NamespaceKey("http://api.digipost.no/schema/datatypes"), "DataTypes" }
-                }
-                    .ToNamespaceProvider(new GeneratorConfiguration{ NamespacePrefix = "DataTypes" }.NamespaceProvider.GenerateNamespace)
+                    { new NamespaceKey("http://api.digipost.no/schema/datatypes"), "Digipost.Api.Client.DataTypes.Core" }
+                }.ToNamespaceProvider(new GeneratorConfiguration{ NamespacePrefix = "DataTypes" }.NamespaceProvider.GenerateNamespace)
             };
             
-            generator.Generate(new List<string>{ "/Users/aaronzachariaharrick/digipost/digipost-api-client-dotnet/Digipost.Api.Client.DataTypes/Resources/XSD/datatypes.xsd" });
+            generator.Generate(new List<string>{ "Resources/XSD/datatypes.xsd" });
         }
     }
 }

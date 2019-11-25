@@ -30,6 +30,6 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ./travis-deploy/pack-and-push.sh $TRAVIS_TAG $NUGET_API_KEY $TRAVIS_BUILD_DIR Digipost.Api.Client.DataTypes
+  script: ./travis-deploy/pack-and-push.sh $TRAVIS_TAG $NUGET_API_KEY $TRAVIS_BUILD_DIR Digipost.Api.Client.DataTypes.Core
   on:
     tags: true
