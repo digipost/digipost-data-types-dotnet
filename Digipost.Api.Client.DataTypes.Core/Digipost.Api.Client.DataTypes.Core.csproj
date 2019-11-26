@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="Build">
+
+    <PropertyGroup>
+        <Title>Digipost Api Client DataTypes Core</Title>
+        <PackageId>Digipost.Api.Client.DataTypes.Core</PackageId>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <RootNamespace>Digipost.Api.Client.DataTypes.Core</RootNamespace>
+        <AssemblyName>Digipost.Api.Client.DataTypes.Core</AssemblyName>
+        <ProjectGuid>{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}</ProjectGuid>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1591</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1591</NoWarn>
+        <DocumentationFile>bin\Release\Digipost.Api.Client.DataTypes.Core.XML</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Digipost.Api.Client.Shared" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+        <None Update="Resources/XSD/*" />
+        <None Update="Resources/XML/*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resources/XSD/*" />
+        <None Remove="Resources/XML/*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Resources/XSD/*" />
+        <EmbeddedResource Include="Resources/XML/*" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Compile Include="..\SharedAssemblyInfo.cs">
+            <Link>Properties\SharedAssemblyInfo.cs</Link>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="C:\Keys\signingkey.snk">
+            <Link>signingkey.snk</Link>
+        </None>
+    </ItemGroup>
+    
+</Project>
