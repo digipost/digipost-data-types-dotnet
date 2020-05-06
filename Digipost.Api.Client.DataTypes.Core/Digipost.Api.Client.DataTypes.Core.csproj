@@ -6,7 +6,7 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Core</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Core</AssemblyName>
         <ProjectGuid>{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}</ProjectGuid>
@@ -38,7 +38,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Digipost.Api.Client.Shared" Version="5.0.0" />
+      <PackageReference Include="Digipost.Api.Client.Shared" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(Configuration)' == 'Debug'">

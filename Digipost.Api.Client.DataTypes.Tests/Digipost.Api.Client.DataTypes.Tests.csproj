@@ -6,7 +6,7 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Tests</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Tests</AssemblyName>
         <ProjectGuid>{8814CB98-13B3-4CDF-A081-D1470F80D38B}</ProjectGuid>
@@ -37,7 +37,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Digipost.Api.Client.Shared" Version="5.0.0" />
+        <PackageReference Include="Digipost.Api.Client.Shared" Version="6.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
         <PackageReference Include="Moq" Version="4.13.1" />
         <PackageReference Include="Tynamix.ObjectFiller" Version="1.5.5" />
