@@ -3,6 +3,8 @@
     <PropertyGroup>
         <Title>Digipost Api Client DataTypes Core</Title>
         <PackageId>Digipost.Api.Client.DataTypes.Core</PackageId>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\signingkey.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
     
     <PropertyGroup>
@@ -38,7 +40,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Digipost.Api.Client.Shared" Version="6.0.0" />
+      <PackageReference Include="Digipost.Api.Client.Shared" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(Configuration)' == 'Debug'">
@@ -62,7 +64,7 @@
         </Compile>
     </ItemGroup>
     <ItemGroup>
-        <None Include="C:\Keys\signingkey.snk">
+        <None Include="..\signingkey.snk">
             <Link>signingkey.snk</Link>
         </None>
     </ItemGroup>
