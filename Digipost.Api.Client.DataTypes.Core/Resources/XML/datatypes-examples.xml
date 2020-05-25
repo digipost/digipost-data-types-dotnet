@@ -344,4 +344,16 @@
         <signing-time>2018-07-11T10:00:00+02:00</signing-time>
     </signedDocument>
 
+    <inkasso xmlns="http://api.digipost.no/schema/datatypes">
+        <link>
+            <url>https://www.example.com</url>
+            <description>Gå til avsenders side for å gjøre en handling</description>
+            <button-text>Ta meg til handling!</button-text>
+        </link>
+        <due-date>2019-12-10T00:00:00+01:00</due-date>
+        <sum>42</sum>
+        <account>01235424320</account>
+        <kid>1435025439583420243982723</kid>
+    </inkasso>
+    
 </datatypes>
