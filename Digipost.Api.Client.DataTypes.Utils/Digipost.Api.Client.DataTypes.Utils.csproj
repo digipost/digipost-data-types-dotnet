@@ -8,7 +8,7 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Utils</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Utils</AssemblyName>
         <ProjectGuid>{A6CC23AB-6E38-42D1-9DDE-854AFB428E05}</ProjectGuid>
