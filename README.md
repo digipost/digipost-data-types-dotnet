@@ -15,7 +15,10 @@ Releasing er gjort via tagging med [Semver](http://semver.org) versjons schema. 
 
 ## Hvordan legge til ny data-type
 
-1. Copy-paste https://raw.githubusercontent.com/digipost/digipost-data-types/master/datatypes.xsd til `datatypes.xsd`
-2. Legg til eksempel-xsd av nye datatyper i `datatypes-examples.xml`
+1. Copy-paste https://raw.githubusercontent.com/digipost/digipost-data-types/main/datatypes.xsd til `datatypes.xsd`
+2. Legg til eksempel-xsd av nye datatyper i `datatypes-examples.xml` (kan også dupliseres fra repoet over)
 3. Kjør GenerationUtil
+    1. CLI:
+        * $ cd Digipost.Api.Client.DataTypes.Utils/obj/Debug/netcoreapp3.1
+        * $ dotnet run --project ../../../
 4. Kjør tester
