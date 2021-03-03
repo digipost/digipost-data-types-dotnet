@@ -1,326 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <datatypes>
-    <appointment xmlns="http://api.digipost.no/schema/datatypes">
-        <start-time>2017-06-27T10:00:00+02:00</start-time>
-        <end-time>2017-06-27T11:00:00+02:00</end-time>
-        <arrival-time>Oppmøte senest 15 minutter før timen</arrival-time>
-        <place>Oslo City Røntgen</place>
-        <address>
-            <street-address>Storgata 23</street-address>
-            <postal-code>0011</postal-code>
-            <city>Oslo</city>
-            <country>Norge</country>
-        </address>
-        <sub-title>Undersøke smerter i ryggen</sub-title>
-        <info>
-            <title>Informasjon om Oslo City Røntgen</title>
-            <text>Oslo City Røntgen er et spesialistsenter for avansert bildediagnostikk.</text>
-        </info>
-    </appointment>
-
-    <boligdetaljer xmlns="http://api.digipost.no/schema/datatypes">
-        <residence>
-            <address>
-                <house-number>23</house-number>
-                <street-name>Storgata</street-name>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-            </address>
-            <matrikkel>
-                <kommunenummer>0301</kommunenummer>
-                <gaardsnummer>208</gaardsnummer>
-                <bruksnummer>630</bruksnummer>
-                <festenummer>0</festenummer>
-                <seksjonsnummer>0</seksjonsnummer>
-            </matrikkel>
-            <source>boligmappa</source>
-            <external-id>externalId</external-id>
-        </residence>
-        <hjemmelshavere>
-            <name>Gunnar Gunnersen</name>
-            <email>gunnargunnar@gunn.ar</email>
-        </hjemmelshavere>
-        <bruksareal>59</bruksareal>
-        <antall-oppholdsrom>3</antall-oppholdsrom>
-        <antall-baderom>4</antall-baderom>
-        <omsetningshistorikk>
-            <dato>2017-07-27T10:00:00+02:00</dato>
-            <beskrivelse>Privat salg av sekundærbolig</beskrivelse>
-            <selger>Bill Isalg</selger>
-            <kjoeper>Cooper Coopersen</kjoeper>
-            <beloep>12345678</beloep>
-        </omsetningshistorikk>
-        <organisasjonsnummer>123456789</organisasjonsnummer>
-        <bruksenhet>H1337</bruksenhet>
-        <andelsnummer>42</andelsnummer>
-        <heftelser>
-            <panthaver>TNT ASA</panthaver>
-            <type-pant>Pantedokument</type-pant>
-            <beloep>3000000000</beloep>
-        </heftelser>
-        <callToAction>
-            <url>https://www.example.com</url>
-            <description>Gå til avsenders side for å gjøre en handling</description>
-            <button-text>Ta meg til handling!</button-text>
-        </callToAction>
-    </boligdetaljer>
-
-    <event xmlns="http://api.digipost.no/schema/datatypes">
-        <sub-title>Kommunestyre- og fylkestingvalg</sub-title>
-        <start-time>
-            <start-time>2019-05-23T10:00:00+02:00</start-time>
-            <end-time>2019-05-23T16:00:00+02:00</end-time>
-        </start-time>
-        <timeLabel>Opening hours</timeLabel>
-        <description>Velkommen til valg! Husk legitimasjon.</description>
-        <place>Sagene skole</place>
-        <placeLabel>Election venue</placeLabel>
-        <address>
-            <street-address>Storgata 23</street-address>
-            <postal-code>0011</postal-code>
-            <city>Oslo</city>
-            <country>Norge</country>
-        </address>
-        <info>
-            <title>Forhåndsstemming</title>
-            <text>Du kan forhåndsstemme fra 10. august</text>
-        </info>
-        <barcodeLabel>Barcode for use on election day:</barcodeLabel>
-        <barcode>
-            <barcode-value>1234567890</barcode-value>
-            <barcode-type>code-128</barcode-type>
-            <barcode-text>Show barcode for faster identification</barcode-text>
-            <show-value-in-barcode>true</show-value-in-barcode>
-        </barcode>
-        <links>
-            <url>https://valg.no</url>
-            <description>Les mer om valget på valg.no</description>
-        </links>
-    </event>
-
-    <externalLink xmlns="http://api.digipost.no/schema/datatypes">
+<appointment xmlns="http://api.digipost.no/schema/datatypes">
+    <start-time>2017-06-27T10:00:00+02:00</start-time>
+    <end-time>2017-06-27T11:00:00+02:00</end-time>
+    <arrival-time>Oppmøte senest 15 minutter før timen</arrival-time>
+    <place>Oslo City Røntgen</place>
+    <address>
+        <street-address>Storgata 23</street-address>
+        <postal-code>0011</postal-code>
+        <city>Oslo</city>
+        <country>Norge</country>
+    </address>
+    <sub-title>Undersøke smerter i ryggen</sub-title>
+    <info>
+        <title>Informasjon om Oslo City Røntgen</title>
+        <text>Oslo City Røntgen er et spesialistsenter for avansert bildediagnostikk.</text>
+    </info>
+    <language>NB</language>
+    <link>
         <url>https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/</url>
         <deadline>2017-09-30T13:37:00+02:00</deadline>
         <description>Oslo Kommune ber deg akseptere eller avslå tilbudet om barnehageplass.</description>
         <button-text>Svar på barnehageplass</button-text>
-    </externalLink>
+    </link>
+</appointment>
 
-    <payslip xmlns="http://api.digipost.no/schema/datatypes"/>
-
-    <pickup-notice xmlns="http://api.digipost.no/schema/datatypes">
-        <parcel-id>KB432788293NO</parcel-id>
-        <parcel-uuid>70300492517312675</parcel-uuid>
-        <barcode>
-            <barcode-value>1234567890</barcode-value>
-            <barcode-type>CODE_128</barcode-type>
-            <barcode-text>Show barcode for faster identification</barcode-text>
-            <show-value-in-barcode>true</show-value-in-barcode>
-        </barcode>
-        <product-name>Klimanøytral Servicepakke</product-name>
-        <arrival-date-time>2018-09-10T10:00:00+02:00</arrival-date-time>
-        <return-date-time>2018-09-24T10:00:00+02:00</return-date-time>
-        <recipient>
-            <name>Test Testesen</name>
-            <digipost-address>test.testesen#0000</digipost-address>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-        </recipient>
-        <sender>
-            <name>Avsenderservice as</name>
-            <reference>13372500</reference>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-        </sender>
-        <pickup-place>
-            <name>Coop Mega</name>
-            <code>RC89</code>
-            <instruction>Må hentes innen 010180</instruction>
-            <shelf-location>H32</shelf-location>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-        </pickup-place>
-        <package>
-            <length>120</length>
-            <width>60</width>
-            <height>60</height>
-            <weight>35000</weight>
-        </package>
-        <cost>
-            <value-to-be-payed>128.00</value-to-be-payed>
-            <package-value>1277.00</package-value>
-            <customs-fee-outlayed>162.00</customs-fee-outlayed>
-            <vas-text>FORENKLET TOLLBEHANDLING</vas-text>
-            <customs-fee>0</customs-fee>
-            <customs-fee-outlay-cost>0</customs-fee-outlay-cost>
-            <cod-amount>0</cod-amount>
-            <cod-fee>0</cod-fee>
-        </cost>
-        <status>READY_FOR_PICKUP</status>
-        <tags>POSTEN</tags>
-    </pickup-notice>
-
-    <pickup-notice-status xmlns="http://api.digipost.no/schema/datatypes">
-        <status>READY_FOR_PICKUP</status>
-        <occurrence-datetime>2019-01-10T10:10:00+01:00</occurrence-datetime>
-    </pickup-notice-status>
-
-    <proof xmlns="http://api.digipost.no/schema/datatypes">
-        <authorizer-name>Bekkestua Bibliotek</authorizer-name>
-        <background-color>#e1e1e1</background-color>
-        <issued-time>2019-05-23T10:00:00+02:00</issued-time>
-        <valid-period>
-            <yearly-repeating-period>
-                <start-year>2020</start-year>
-                <end-year>2022</end-year>
-                <from>
-                    <month>1</month>
-                    <day>1</day>
-                </from>
-                <to>
-                    <month>12</month>
-                    <day>31</day>
-                    <hour>0</hour>
-                    <min>0</min>
-                    <time-zone>+01:00</time-zone>
-                </to>
-            </yearly-repeating-period>
-        </valid-period>
-        <proof-holder>
-            <firstname>Ola</firstname>
-            <surname>Nordmann</surname>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-        </proof-holder>
-        <title>Lånekort</title>
-        <proof-id-name>Lånekortnummer</proof-id-name>
-        <proof-id-value>a-132415124-xyzzy-21341</proof-id-value>
-        <attribute>
-            <title>Kaffeklubb</title>
-            <text>Premium deluxe medlem</text>
-        </attribute>
-        <info>
-            <title>Regler</title>
-            <text>Det er ikke lov å rive ut sider i bøkene, eller søle med ketchup. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet urna condimentum, pulvinar neque ac, tempor tellus. Vestibulum ante ipsum primis in faucibus orci luctus et </text>
-        </info>
-    </proof>
-
-    <receipt xmlns="http://api.digipost.no/schema/datatypes">
-        <receiptId>F96B6805-2453-478A-B58B-CCDFA07E21ED</receiptId>
-        <receiptNumber>364567</receiptNumber>
-        <purchaseTime>2018-05-27T10:00:00+02:00</purchaseTime>
-        <totalPrice>59.80</totalPrice>
-        <totalVat>11.96</totalVat>
-        <currency>NOK</currency>
-        <cashier>Benny</cashier>
-        <register>15</register>
-        <merchant-chain>7F5A1EFF-ECAE-48A7-A07F-38D87576F815</merchant-chain>
-        <merchant-name>Grünerløkka Hip Coffee</merchant-name>
-        <merchant-phone-number>12345678</merchant-phone-number>
-        <merchant-address>
-            <street-address>Storgata 23</street-address>
-            <postal-code>0011</postal-code>
-            <city>Oslo</city>
-            <country>Norge</country>
-        </merchant-address>
-        <orgnumber>123456789</orgnumber>
-        <barcode>
-            <barcode-value>1234567890</barcode-value>
-            <barcode-type>code-128</barcode-type>
-            <barcode-text>Show barcode for faster identification</barcode-text>
-            <show-value-in-barcode>true</show-value-in-barcode>
-        </barcode>
-        <payments>
-            <type>Bank Axept</type>
-            <card-number>************1234</card-number>
-            <cardName>Visa</cardName>
-            <amount>100.00</amount>
-            <currency-code>NOK</currency-code>
-            <foreign-currency-payment>
-                <currency-code>USD</currency-code>
-                <amount>15</amount>
-                <exchange-rate>7.534567</exchange-rate>
-            </foreign-currency-payment>
-        </payments>
-        <items>
-            <item-name>Tall Cafe latte</item-name>
-            <item-description>Tall vanilla latte with extra sugar</item-description>
-            <item-code>0000012</item-code>
-            <unit>cup</unit>
-            <quantity>2.0</quantity>
-            <item-price>29.90</item-price>
-            <item-vat>5.98</item-vat>
-            <total-price>59.80</total-price>
-            <total-vat>11.96</total-vat>
-            <discount>5.50</discount>
-            <serialNumber>XY12345325GF</serialNumber>
-            <eanCode>1345678</eanCode>
-        </items>
-        <taxiDetails>
-            <carPlateNumber>EK99999</carPlateNumber>
-            <license>12341ASDF</license>
-            <orgNumberLicenseHolder>123456789</orgNumberLicenseHolder>
-            <startTime>2018-06-05T10:00:00+02:00</startTime>
-            <stopTime>2018-06-05T10:30:00+02:00</stopTime>
-            <tips>8.00</tips>
-            <totalMeterPrice>438.50</totalMeterPrice>
-            <totalDistanceBeforeBoardingInMeters>2000</totalDistanceBeforeBoardingInMeters>
-            <totalDistanceInMeters>8500</totalDistanceInMeters>
-            <totalDistanceWithPassengerInMeters>6500</totalDistanceWithPassengerInMeters>
-            <totalTimeBeforeBoardingInSeconds>320</totalTimeBeforeBoardingInSeconds>
-            <totalTimeInSeconds>1220</totalTimeInSeconds>
-            <totalTimeWithPassengerInSeconds>900</totalTimeWithPassengerInSeconds>
-            <vat>
-                <levels>
-                    <grossAmount>400.00</grossAmount>
-                    <netAmount>320.00</netAmount>
-                    <vat>80.00</vat>
-                    <vatPercent>25.00</vatPercent>
-                </levels>
-                <sum>64.90</sum>
-            </vat>
-        </taxiDetails>
-        <customer>
-            <name>Ola Nordmann</name>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-            <phoneNumber>Delivered to the doorstep</phoneNumber>
-        </customer>
-        <delivery>
-            <name>Ola Nordmann</name>
-            <address>
-                <street-address>Storgata 23</street-address>
-                <postal-code>0011</postal-code>
-                <city>Oslo</city>
-                <country>Norge</country>
-            </address>
-            <terms>Delivered to the doorstep</terms>
-        </delivery>
-        <order-number>123456</order-number>
-        <membership-number>HG1234HH8778</membership-number>
-        <comment>Hip Coffee to the good citizens of Løkka</comment>
-    </receipt>
-
-    <residence xmlns="http://api.digipost.no/schema/datatypes">
+<boligdetaljer xmlns="http://api.digipost.no/schema/datatypes">
+    <residence>
         <address>
             <house-number>23</house-number>
             <street-name>Storgata</street-name>
@@ -337,23 +43,352 @@
         <source>boligmappa</source>
         <external-id>externalId</external-id>
     </residence>
+    <hjemmelshavere>
+        <name>Gunnar Gunnersen</name>
+        <email>gunnargunnar@gunn.ar</email>
+    </hjemmelshavere>
+    <bruksareal>59</bruksareal>
+    <antall-oppholdsrom>3</antall-oppholdsrom>
+    <antall-baderom>4</antall-baderom>
+    <omsetningshistorikk>
+        <dato>2017-07-27T10:00:00+02:00</dato>
+        <beskrivelse>Privat salg av sekundærbolig</beskrivelse>
+        <selger>Bill Isalg</selger>
+        <kjoeper>Cooper Coopersen</kjoeper>
+        <beloep>12345678</beloep>
+    </omsetningshistorikk>
+    <organisasjonsnummer>123456789</organisasjonsnummer>
+    <bruksenhet>H1337</bruksenhet>
+    <andelsnummer>42</andelsnummer>
+    <heftelser>
+        <panthaver>TNT ASA</panthaver>
+        <type-pant>Pantedokument</type-pant>
+        <beloep>3000000000</beloep>
+    </heftelser>
+    <callToAction>
+        <url>https://www.example.com</url>
+        <description>Gå til avsenders side for å gjøre en handling</description>
+        <button-text>Ta meg til handling!</button-text>
+    </callToAction>
+    <language>NB</language>
+</boligdetaljer>
 
-    <signedDocument xmlns="http://api.digipost.no/schema/datatypes">
-        <document-issuer>Bedrift AS</document-issuer>
-        <document-subject>Ansettelseskontrakt</document-subject>
-        <signing-time>2018-07-11T10:00:00+02:00</signing-time>
-    </signedDocument>
+<event xmlns="http://api.digipost.no/schema/datatypes">
+    <sub-title>Kommunestyre- og fylkestingvalg</sub-title>
+    <start-time>
+        <start-time>2019-05-23T10:00:00+02:00</start-time>
+        <end-time>2019-05-23T16:00:00+02:00</end-time>
+    </start-time>
+    <timeLabel>Opening hours</timeLabel>
+    <description>Velkommen til valg! Husk legitimasjon.</description>
+    <place>Sagene skole</place>
+    <placeLabel>Election venue</placeLabel>
+    <address>
+        <street-address>Storgata 23</street-address>
+        <postal-code>0011</postal-code>
+        <city>Oslo</city>
+        <country>Norge</country>
+    </address>
+    <info>
+        <title>Forhåndsstemming</title>
+        <text>Du kan forhåndsstemme fra 10. august</text>
+    </info>
+    <barcodeLabel>Barcode for use on election day:</barcodeLabel>
+    <barcode>
+        <barcode-value>1234567890</barcode-value>
+        <barcode-type>code-128</barcode-type>
+        <barcode-text>Show barcode for faster identification</barcode-text>
+        <show-value-in-barcode>true</show-value-in-barcode>
+    </barcode>
+    <links>
+        <url>https://valg.no</url>
+        <description>Les mer om valget på valg.no</description>
+    </links>
+    <language>NB</language>
+</event>
 
-    <inkasso xmlns="http://api.digipost.no/schema/datatypes">
-        <link>
-            <url>https://www.example.com</url>
-            <description>Gå til avsenders side for å gjøre en handling</description>
-            <button-text>Ta meg til handling!</button-text>
-        </link>
-        <due-date>2019-12-10T00:00:00+01:00</due-date>
-        <sum>42</sum>
-        <account>01235424320</account>
-        <kid>1435025439583420243982723</kid>
-    </inkasso>
-    
+<externalLink xmlns="http://api.digipost.no/schema/datatypes">
+    <url>https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/</url>
+    <deadline>2017-09-30T13:37:00+02:00</deadline>
+    <description>Oslo Kommune ber deg akseptere eller avslå tilbudet om barnehageplass.</description>
+    <button-text>Svar på barnehageplass</button-text>
+</externalLink>
+
+<inkasso xmlns="http://api.digipost.no/schema/datatypes">
+    <link>
+        <url>https://www.example.com</url>
+        <description>Gå til avsenders side for å gjøre en handling</description>
+        <button-text>Ta meg til handling!</button-text>
+    </link>
+    <due-date>2019-12-10T00:00:00+01:00</due-date>
+    <sum>42</sum>
+    <account>01235424320</account>
+    <kid>1435025439583420243982723</kid>
+</inkasso>
+
+<invoice xmlns="http://api.digipost.no/schema/datatypes">
+    <link>
+        <url>https://www.example.com</url>
+        <description>Gå til avsenders side for å gjøre en handling</description>
+        <button-text>Ta meg til handling!</button-text>
+    </link>
+    <due-date>2020-09-10T00:00:00+01:00</due-date>
+    <sum>42</sum>
+    <creditor-account>01235424320</creditor-account>
+    <kid>1435025439583420243982723</kid>
+</invoice>
+
+<invoice-payment xmlns="http://api.digipost.no/schema/datatypes">
+    <payment-id>33aa4572ac1c61d807345c5968ab1fbd</payment-id>
+    <payment-status>PDNG</payment-status>
+    <payment-time>2020-09-21T00:00:00+01:00</payment-time>
+    <debtor-account>01235424320</debtor-account>
+    <payment-channel>My pay app</payment-channel>
+    <payment-bank>
+        <id>ce7ad8ba63d0ea5cd212580192a00156</id>
+        <name>Acme Bank inc</name>
+    </payment-bank>
+</invoice-payment>
+
+<payslip xmlns="http://api.digipost.no/schema/datatypes"/>
+
+<pickup-notice xmlns="http://api.digipost.no/schema/datatypes">
+    <parcel-id>KB432788293NO</parcel-id>
+    <parcel-uuid>70300492517312675</parcel-uuid>
+    <barcode>
+        <barcode-value>1234567890</barcode-value>
+        <barcode-type>CODE_128</barcode-type>
+        <barcode-text>Show barcode for faster identification</barcode-text>
+        <show-value-in-barcode>true</show-value-in-barcode>
+    </barcode>
+    <product-name>Klimanøytral Servicepakke</product-name>
+    <arrival-date-time>2018-09-10T10:00:00+02:00</arrival-date-time>
+    <return-date-time>2018-09-24T10:00:00+02:00</return-date-time>
+    <recipient>
+        <name>Test Testesen</name>
+        <digipost-address>test.testesen#0000</digipost-address>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+    </recipient>
+    <sender>
+        <name>Avsenderservice as</name>
+        <reference>13372500</reference>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+    </sender>
+    <pickup-place>
+        <name>Coop Mega</name>
+        <code>RC89</code>
+        <instruction>Må hentes innen 010180</instruction>
+        <shelf-location>H32</shelf-location>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+    </pickup-place>
+    <package>
+        <length>120</length>
+        <width>60</width>
+        <height>60</height>
+        <weight>35000</weight>
+    </package>
+    <cost>
+        <value-to-be-payed>128.00</value-to-be-payed>
+        <package-value>1277.00</package-value>
+        <customs-fee-outlayed>162.00</customs-fee-outlayed>
+        <vas-text>FORENKLET TOLLBEHANDLING</vas-text>
+        <customs-fee>0</customs-fee>
+        <customs-fee-outlay-cost>0</customs-fee-outlay-cost>
+        <cod-amount>0</cod-amount>
+        <cod-fee>0</cod-fee>
+    </cost>
+    <status>READY_FOR_PICKUP</status>
+    <tags>POSTEN</tags>
+    <language>NB</language>
+</pickup-notice>
+
+<pickup-notice-status xmlns="http://api.digipost.no/schema/datatypes">
+    <status>READY_FOR_PICKUP</status>
+    <occurrence-datetime>2019-01-10T10:10:00+01:00</occurrence-datetime>
+</pickup-notice-status>
+
+<proof xmlns="http://api.digipost.no/schema/datatypes">
+    <authorizer-name>Bekkestua Bibliotek</authorizer-name>
+    <background-color>#e1e1e1</background-color>
+    <issued-time>2019-05-23T10:00:00+02:00</issued-time>
+    <valid-period>
+        <yearly-repeating-period>
+            <start-year>2020</start-year>
+            <end-year>2022</end-year>
+            <from>
+                <month>1</month>
+                <day>1</day>
+            </from>
+            <to>
+                <month>12</month>
+                <day>31</day>
+                <hour>0</hour>
+                <min>0</min>
+            </to>
+        </yearly-repeating-period>
+    </valid-period>
+    <proof-holder>
+        <firstname>Ola</firstname>
+        <surname>Nordmann</surname>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+    </proof-holder>
+    <title>Lånekort</title>
+    <proof-id-name>Lånekortnummer</proof-id-name>
+    <proof-id-value>a-132415124-xyzzy-21341</proof-id-value>
+    <attribute>
+        <title>Kaffeklubb</title>
+        <text>Premium deluxe medlem</text>
+    </attribute>
+    <info>
+        <title>Regler</title>
+        <text>Det er ikke lov å rive ut sider i bøkene, eller søle med ketchup. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet urna condimentum, pulvinar neque ac, tempor tellus. Vestibulum ante ipsum primis in faucibus orci luctus et </text>
+    </info>
+    <language>NB</language>
+</proof>
+
+<receipt xmlns="http://api.digipost.no/schema/datatypes">
+    <receiptId>F96B6805-2453-478A-B58B-CCDFA07E21ED</receiptId>
+    <receiptNumber>364567</receiptNumber>
+    <purchaseTime>2018-05-27T10:00:00+02:00</purchaseTime>
+    <totalPrice>59.80</totalPrice>
+    <totalVat>11.96</totalVat>
+    <currency>NOK</currency>
+    <cashier>Benny</cashier>
+    <register>15</register>
+    <merchant-chain>7F5A1EFF-ECAE-48A7-A07F-38D87576F815</merchant-chain>
+    <merchant-name>Grünerløkka Hip Coffee</merchant-name>
+    <merchant-phone-number>12345678</merchant-phone-number>
+    <merchant-address>
+        <street-address>Storgata 23</street-address>
+        <postal-code>0011</postal-code>
+        <city>Oslo</city>
+        <country>Norge</country>
+    </merchant-address>
+    <orgnumber>123456789</orgnumber>
+    <barcode>
+        <barcode-value>1234567890</barcode-value>
+        <barcode-type>code-128</barcode-type>
+        <barcode-text>Show barcode for faster identification</barcode-text>
+        <show-value-in-barcode>true</show-value-in-barcode>
+    </barcode>
+    <payments>
+        <type>Bank Axept</type>
+        <card-number>************1234</card-number>
+        <cardName>Visa</cardName>
+        <amount>100.00</amount>
+        <currency-code>NOK</currency-code>
+        <foreign-currency-payment>
+            <currency-code>USD</currency-code>
+            <amount>15</amount>
+            <exchange-rate>7.534567</exchange-rate>
+        </foreign-currency-payment>
+    </payments>
+    <items>
+        <item-name>Tall Cafe latte</item-name>
+        <item-description>Tall vanilla latte with extra sugar</item-description>
+        <item-code>0000012</item-code>
+        <unit>cup</unit>
+        <quantity>2.0</quantity>
+        <item-price>29.90</item-price>
+        <item-vat>5.98</item-vat>
+        <total-price>59.80</total-price>
+        <total-vat>11.96</total-vat>
+        <discount>5.50</discount>
+        <serialNumber>XY12345325GF</serialNumber>
+        <eanCode>1345678</eanCode>
+    </items>
+    <taxiDetails>
+        <carPlateNumber>EK99999</carPlateNumber>
+        <license>12341ASDF</license>
+        <orgNumberLicenseHolder>123456789</orgNumberLicenseHolder>
+        <startTime>2018-06-05T10:00:00+02:00</startTime>
+        <stopTime>2018-06-05T10:30:00+02:00</stopTime>
+        <tips>8.00</tips>
+        <totalMeterPrice>438.50</totalMeterPrice>
+        <totalDistanceBeforeBoardingInMeters>2000</totalDistanceBeforeBoardingInMeters>
+        <totalDistanceInMeters>8500</totalDistanceInMeters>
+        <totalDistanceWithPassengerInMeters>6500</totalDistanceWithPassengerInMeters>
+        <totalTimeBeforeBoardingInSeconds>320</totalTimeBeforeBoardingInSeconds>
+        <totalTimeInSeconds>1220</totalTimeInSeconds>
+        <totalTimeWithPassengerInSeconds>900</totalTimeWithPassengerInSeconds>
+        <vat>
+            <levels>
+                <grossAmount>400.00</grossAmount>
+                <netAmount>320.00</netAmount>
+                <vat>80.00</vat>
+                <vatPercent>25.00</vatPercent>
+            </levels>
+            <sum>64.90</sum>
+        </vat>
+    </taxiDetails>
+    <customer>
+        <name>Ola Nordmann</name>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+        <phoneNumber>Delivered to the doorstep</phoneNumber>
+    </customer>
+    <delivery>
+        <name>Ola Nordmann</name>
+        <address>
+            <street-address>Storgata 23</street-address>
+            <postal-code>0011</postal-code>
+            <city>Oslo</city>
+            <country>Norge</country>
+        </address>
+        <terms>Delivered to the doorstep</terms>
+    </delivery>
+    <order-number>123456</order-number>
+    <membership-number>HG1234HH8778</membership-number>
+    <comment>Hip Coffee to the good citizens of Løkka</comment>
+    <language>NB</language>
+</receipt>
+
+<residence xmlns="http://api.digipost.no/schema/datatypes">
+    <address>
+        <house-number>23</house-number>
+        <street-name>Storgata</street-name>
+        <postal-code>0011</postal-code>
+        <city>Oslo</city>
+    </address>
+    <matrikkel>
+        <kommunenummer>0301</kommunenummer>
+        <gaardsnummer>208</gaardsnummer>
+        <bruksnummer>630</bruksnummer>
+        <festenummer>0</festenummer>
+        <seksjonsnummer>0</seksjonsnummer>
+    </matrikkel>
+    <source>boligmappa</source>
+    <external-id>externalId</external-id>
+</residence>
+
+<signedDocument xmlns="http://api.digipost.no/schema/datatypes">
+    <document-issuer>Bedrift AS</document-issuer>
+    <document-subject>Ansettelseskontrakt</document-subject>
+    <signing-time>2018-07-11T10:00:00+02:00</signing-time>
+</signedDocument>
+
 </datatypes>

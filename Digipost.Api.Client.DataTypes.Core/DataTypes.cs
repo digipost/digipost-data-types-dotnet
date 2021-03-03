@@ -111,6 +111,9 @@ namespace Digipost.Api.Client.DataTypes.Core
                 this._language = value;
             }
         }
+        
+        [System.Xml.Serialization.XmlElementAttribute("link")]
+        public ExternalLink Link { get; set; }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -138,6 +141,53 @@ namespace Digipost.Api.Client.DataTypes.Core
         NB,
         
         EN,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("externalLink", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("externalLink", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class ExternalLink
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("url")]
+        public string Url { get; set; }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [System.Xml.Serialization.XmlElementAttribute("deadline", DataType="dateTime")]
+        public System.DateTime DeadlineValue { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public bool DeadlineValueSpecified { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> Deadline
+        {
+            get
+            {
+                if (this.DeadlineValueSpecified)
+                {
+                    return this.DeadlineValue;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.DeadlineValue = value.GetValueOrDefault();
+                this.DeadlineValueSpecified = value.HasValue;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlElementAttribute("description")]
+        public string Description { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("button-text")]
+        public string Button_Text { get; set; }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -533,53 +583,6 @@ namespace Digipost.Api.Client.DataTypes.Core
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("externalLink", Namespace="http://api.digipost.no/schema/datatypes")]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("externalLink", Namespace="http://api.digipost.no/schema/datatypes")]
-    public partial class ExternalLink
-    {
-        
-        [System.Xml.Serialization.XmlElementAttribute("url")]
-        public string Url { get; set; }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [System.Xml.Serialization.XmlElementAttribute("deadline", DataType="dateTime")]
-        public System.DateTime DeadlineValue { get; set; }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public bool DeadlineValueSpecified { get; set; }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public System.Nullable<System.DateTime> Deadline
-        {
-            get
-            {
-                if (this.DeadlineValueSpecified)
-                {
-                    return this.DeadlineValue;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this.DeadlineValue = value.GetValueOrDefault();
-                this.DeadlineValueSpecified = value.HasValue;
-            }
-        }
-        
-        [System.Xml.Serialization.XmlElementAttribute("description")]
-        public string Description { get; set; }
-        
-        [System.Xml.Serialization.XmlElementAttribute("button-text")]
-        public string Button_Text { get; set; }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
-    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute("event", Namespace="http://api.digipost.no/schema/datatypes")]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute("event", Namespace="http://api.digipost.no/schema/datatypes")]
@@ -888,6 +891,74 @@ namespace Digipost.Api.Client.DataTypes.Core
         
         [System.Xml.Serialization.XmlElementAttribute("signing-time")]
         public string Signing_Time { get; set; }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("bank", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Bank
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("id")]
+        public string Id { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("name")]
+        public string Name { get; set; }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("invoice", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("invoice", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class Invoice
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("link")]
+        public ExternalLink Link { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("due-date")]
+        public string Due_Date { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("sum")]
+        public decimal Sum { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("creditor-account")]
+        public string Creditor_Account { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("kid")]
+        public string Kid { get; set; }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("invoicePayment", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("invoice-payment", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class InvoicePayment
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("payment-id")]
+        public string Payment_Id { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("payment-status")]
+        public string Payment_Status { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("payment-time")]
+        public string Payment_Time { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("debtor-account")]
+        public string Debtor_Account { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("debtor-account-name")]
+        public string Debtor_Account_Name { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("payment-channel")]
+        public string Payment_Channel { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("payment-bank")]
+        public Bank Payment_Bank { get; set; }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -1383,15 +1454,15 @@ namespace Digipost.Api.Client.DataTypes.Core
     public enum Status
     {
         
+        UNKNOWN,
+        
         PICKED_UP,
+        
+        DEVIATION,
         
         RETURNED,
         
         READY_FOR_PICKUP,
-        
-        UNKNOWN,
-        
-        DEVIATION,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -1400,11 +1471,11 @@ namespace Digipost.Api.Client.DataTypes.Core
     public enum Tag
     {
         
-        POSTEN,
+        VARSEL2,
         
         VARSEL1,
         
-        VARSEL2,
+        POSTEN,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
