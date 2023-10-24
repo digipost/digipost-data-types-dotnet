@@ -136,11 +136,11 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     public enum Language
     {
         
+        EN,
+        
         NN,
         
         NB,
-        
-        EN,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -1389,6 +1389,9 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
                 this._language = value;
             }
         }
+        
+        [System.Xml.Serialization.XmlElementAttribute("link")]
+        public ExternalLink Link { get; set; }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -1456,9 +1459,9 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
         
         UNKNOWN,
         
-        PICKED_UP,
-        
         DEVIATION,
+        
+        PICKED_UP,
         
         RETURNED,
         
@@ -1471,9 +1474,9 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     public enum Tag
     {
         
-        VARSEL2,
-        
         VARSEL1,
+        
+        VARSEL2,
         
         POSTEN,
     }
@@ -2295,5 +2298,71 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
         
         [System.Xml.Serialization.XmlElementAttribute("vatPercent")]
         public string VatPercent { get; set; }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequest", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("share-documents-request", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class ShareDocumentsRequest
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("max-share-duration")]
+        public string Max_Share_Duration { get; set; }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestEvent", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("share-documents-request-event", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class ShareDocumentsRequestEvent
+    {
+        
+        [System.Xml.Serialization.XmlElementAttribute("event-type")]
+        public ShareDocumentsRequestEventType Event_Type { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("timestamp", DataType="dateTime")]
+        public System.DateTime Timestamp { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        private System.Collections.ObjectModel.Collection<long> _document_Ids;
+        
+        [System.Xml.Serialization.XmlElementAttribute("document-ids")]
+        public System.Collections.ObjectModel.Collection<long> Document_Ids
+        {
+            get
+            {
+                return this._document_Ids;
+            }
+            private set
+            {
+                this._document_Ids = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool Document_IdsSpecified
+        {
+            get
+            {
+                return (this.Document_Ids.Count != 0);
+            }
+        }
+        
+        public ShareDocumentsRequestEvent()
+        {
+            this._document_Ids = new System.Collections.ObjectModel.Collection<long>();
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestEventType", Namespace="http://api.digipost.no/schema/datatypes")]
+    public enum ShareDocumentsRequestEventType
+    {
+        
+        FILES_SHARED,
     }
 }
