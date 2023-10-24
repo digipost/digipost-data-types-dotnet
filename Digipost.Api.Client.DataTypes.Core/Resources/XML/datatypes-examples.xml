@@ -385,6 +385,16 @@
     <external-id>externalId</external-id>
 </residence>
 
+<share-documents-request xmlns="http://api.digipost.no/schema/datatypes">
+    <max-share-duration>PT2160H</max-share-duration>
+</share-documents-request>
+
+<share-documents-request-event xmlns="http://api.digipost.no/schema/datatypes">
+    <event-type>FILES_SHARED</event-type>
+    <timestamp>2017-09-30T13:37:00+02:00</timestamp>
+    <document-ids>123</document-ids>
+</share-documents-request-event>
+
 <signedDocument xmlns="http://api.digipost.no/schema/datatypes">
     <document-issuer>Bedrift AS</document-issuer>
     <document-subject>Ansettelseskontrakt</document-subject>
