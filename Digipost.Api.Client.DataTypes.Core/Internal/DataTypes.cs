@@ -2308,8 +2308,11 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     public partial class ShareDocumentsRequest
     {
         
-        [System.Xml.Serialization.XmlElementAttribute("max-share-duration")]
-        public string Max_Share_Duration { get; set; }
+        [System.Xml.Serialization.XmlElementAttribute("max-share-duration-seconds")]
+        public long Max_Share_Duration_Seconds { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("purpose")]
+        public string Purpose { get; set; }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.0.414.0")]
@@ -2362,6 +2365,8 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestEventType", Namespace="http://api.digipost.no/schema/datatypes")]
     public enum ShareDocumentsRequestEventType
     {
+        
+        SHARING_STOPPED,
         
         FILES_SHARED,
     }

@@ -486,7 +486,8 @@
 
   <xs:complexType final="extension restriction" name="shareDocumentsRequest">
     <xs:sequence>
-      <xs:element name="max-share-duration" type="xs:string"/>
+      <xs:element name="max-share-duration-seconds" type="xs:long"/>
+      <xs:element name="purpose" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -526,6 +527,7 @@
 
   <xs:simpleType name="shareDocumentsRequestEventType">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="SHARING_STOPPED"/>
       <xs:enumeration value="FILES_SHARED"/>
     </xs:restriction>
   </xs:simpleType>
