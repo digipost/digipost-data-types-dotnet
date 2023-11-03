@@ -386,7 +386,8 @@
 </residence>
 
 <share-documents-request xmlns="http://api.digipost.no/schema/datatypes">
-    <max-share-duration>PT2160H</max-share-duration>
+    <max-share-duration-seconds>1209600</max-share-duration-seconds>
+    <purpose>We require to see your latest pay slip in order to grant you a loan.</purpose>
 </share-documents-request>
 
 <share-documents-request-event xmlns="http://api.digipost.no/schema/datatypes">
