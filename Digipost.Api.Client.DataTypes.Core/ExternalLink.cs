@@ -17,7 +17,7 @@ namespace Digipost.Api.Client.DataTypes.Core
 
         public String ButtonText { get; set; }
 
-        internal override Internal.ExternalLink ToDto()
+        protected override Internal.ExternalLink ToDto()
         {
             return new Internal.ExternalLink
             {

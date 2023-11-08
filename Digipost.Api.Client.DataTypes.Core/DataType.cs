@@ -9,7 +9,7 @@ namespace Digipost.Api.Client.DataTypes.Core
     /// </summary>
     public abstract class DataType<T>
     {
-        internal abstract T ToDto();
+        protected abstract T ToDto();
 
         internal string ToXmlString()
         {
