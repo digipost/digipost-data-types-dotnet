@@ -68,6 +68,20 @@ namespace Digipost.Api.Client.DataTypes.Tests
         }
 
         [Fact]
+        public void ShareDocumentRequest()
+        {
+            var shareDocumentsRequest = new ShareDocumentsRequest(1209600L, "We require to see your latest pay slip in order to grant you a loan.");
+            Assert.Contains(shareDocumentsRequest.ToXmlString(), _xmlExamples);
+        }
+
+        [Fact]
+        public void ShareDocumentRequestEvent()
+        {
+            var shareDocumentsRequest = new StoppedShareDocumentsRequestEvent();
+            Assert.Contains("SHARING_STOPPED", shareDocumentsRequest.ToXmlString());
+        }
+
+        [Fact]
         public void HasGeneratedAllDataTypes()
         {
             XmlNodeList childNodes = xmlDocument.DocumentElement.ChildNodes;
