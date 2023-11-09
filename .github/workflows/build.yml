@@ -11,12 +11,13 @@ jobs:
     - uses: digipost/set-timezone@v2.0
       with:
         timezoneLinux: "Europe/Oslo"
-      
+
     - uses: actions/checkout@v4
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 6.x
+        cache: true
     - name: Print openssl version
       run: |
         openssl version

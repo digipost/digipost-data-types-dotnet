@@ -1,19 +1,40 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
 namespace Digipost.Api.Client.DataTypes.Core.Internal
 {
-    public static class SerializeUtil
+    internal static class SerializeUtil
     {
-        public static string Serialize<T>(T value)
+        public static string SerializeToString<T>(T value)
         {
             if (value == null)
             {
                 return null;
             }
 
+            return doSerialize(value, writer => writer.ToString());
+        }
+
+        public static XmlDocument Serialize<T>(T value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+
+            return doSerialize(value, writer =>
+            {
+                var doc = new XmlDocument();
+                doc.Load(writer.ToString());
+                return doc;
+            });
+        }
+
+        private static OUT doSerialize<T, OUT>(T value, Func<StringWriter, OUT> returnFunc)
+        {
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
             ns.Add("", "http://api.digipost.no/schema/datatypes");
 
@@ -34,7 +55,7 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
                     serializer.Serialize(xmlWriter, value, ns);
                 }
 
-                return textWriter.ToString();
+                return returnFunc.Invoke(textWriter);
             }
         }
 

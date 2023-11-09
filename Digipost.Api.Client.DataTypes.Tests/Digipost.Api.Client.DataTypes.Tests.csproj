@@ -6,9 +6,9 @@
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>..\signingkey.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
-    
+
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Tests</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Tests</AssemblyName>
         <ProjectGuid>{8814CB98-13B3-4CDF-A081-D1470F80D38B}</ProjectGuid>
@@ -51,12 +51,8 @@
             <Project>{2DF4659A-DFF9-4DF6-8B5D-B1FDE55DA498}</Project>
             <Name>Digipost.Api.Client.DataTypes.Core</Name>
         </ProjectReference>
-        <ProjectReference Include="..\Digipost.Api.Client.DataTypes.Utils\Digipost.Api.Client.DataTypes.Utils.csproj">
-            <Project>{A6CC23AB-6E38-42D1-9DDE-854AFB428E05}</Project>
-            <Name>Digipost.Api.Client.DataTypes.Utils</Name>
-        </ProjectReference>
     </ItemGroup>
-    
+
     <ItemGroup>
         <Compile Include="..\SharedAssemblyInfo.cs">
             <Link>Properties\SharedAssemblyInfo.cs</Link>

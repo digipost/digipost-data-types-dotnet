@@ -2,7 +2,7 @@ using System;
 
 namespace Digipost.Api.Client.DataTypes.Core
 {
-    public class ExternalLink : DataType<Internal.ExternalLink>
+    public class ExternalLink : BaseDataType<Internal.ExternalLink>
     {
         public ExternalLink(Uri absoluteUri)
         {
@@ -11,21 +11,28 @@ namespace Digipost.Api.Client.DataTypes.Core
 
         public Uri AbsoluteUri { get; }
 
-        public DateTime Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
 
         public String Description { get; set; }
 
         public String ButtonText { get; set; }
 
-        protected override Internal.ExternalLink ToDto()
+        internal override Internal.ExternalLink ToDto()
         {
-            return new Internal.ExternalLink
+            var externalLink = new Internal.ExternalLink
             {
                 Url = AbsoluteUri.ToString(),
-                Deadline = Deadline,
                 Description = Description,
-                Button_Text = ButtonText
+                ButtonText = ButtonText
             };
+
+            if (Deadline.HasValue)
+            {
+                externalLink.Deadline = Deadline.Value;
+                externalLink.DeadlineValueSpecified = true;
+            }
+
+            return externalLink;
         }
     }
 }
