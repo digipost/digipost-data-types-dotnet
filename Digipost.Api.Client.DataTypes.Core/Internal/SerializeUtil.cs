@@ -28,7 +28,7 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
             return doSerialize(value, writer =>
             {
                 var doc = new XmlDocument();
-                doc.Load(writer.ToString());
+                doc.Load(new StringReader(writer.ToString()));
                 return doc;
             });
         }

@@ -140,6 +140,7 @@ namespace Digipost.Api.Client.DataTypes.Tests
             };
 
             Assert.Contains(appointment.ToXmlString(), _xmlExamples);
+            Assert.NotNull(appointment.ToXmlDocument());
         }
 
         [Fact]
