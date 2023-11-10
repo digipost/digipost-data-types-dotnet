@@ -16,7 +16,7 @@
         <title>Informasjon om Oslo City Røntgen</title>
         <text>Oslo City Røntgen er et spesialistsenter for avansert bildediagnostikk.</text>
     </info>
-    <language>NB</language>
+    <language>NN</language>
     <link>
         <url>https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/</url>
         <deadline>2017-09-30T13:37:00+02:00</deadline>
@@ -116,7 +116,7 @@
 
 <inkasso xmlns="http://api.digipost.no/schema/datatypes">
     <link>
-        <url>https://www.example.com</url>
+        <url>https://www.example.com/</url>
         <description>Gå til avsenders side for å gjøre en handling</description>
         <button-text>Ta meg til handling!</button-text>
     </link>
@@ -128,11 +128,11 @@
 
 <invoice xmlns="http://api.digipost.no/schema/datatypes">
     <link>
-        <url>https://www.example.com</url>
+        <url>https://www.example.com/</url>
         <description>Gå til avsenders side for å gjøre en handling</description>
         <button-text>Ta meg til handling!</button-text>
     </link>
-    <due-date>2020-09-10T00:00:00+01:00</due-date>
+    <due-date>2020-09-10T00:00:00+02:00</due-date>
     <sum>42</sum>
     <creditor-account>01235424320</creditor-account>
     <kid>1435025439583420243982723</kid>
@@ -215,6 +215,12 @@
     <status>READY_FOR_PICKUP</status>
     <tags>POSTEN</tags>
     <language>NB</language>
+    <link>
+        <url>https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/</url>
+        <deadline>2017-09-30T13:37:00+02:00</deadline>
+        <description>Oslo Kommune ber deg akseptere eller avslå tilbudet om barnehageplass.</description>
+        <button-text>Svar på barnehageplass</button-text>
+    </link>
 </pickup-notice>
 
 <pickup-notice-status xmlns="http://api.digipost.no/schema/datatypes">
@@ -384,6 +390,17 @@
     <source>boligmappa</source>
     <external-id>externalId</external-id>
 </residence>
+
+<share-documents-request xmlns="http://api.digipost.no/schema/datatypes">
+    <max-share-duration-seconds>1209600</max-share-duration-seconds>
+    <purpose>We require to see your latest pay slip in order to grant you a loan.</purpose>
+</share-documents-request>
+
+<share-documents-request-documents-shared xmlns="http://api.digipost.no/schema/datatypes">
+    <document-ids>123</document-ids>
+</share-documents-request-documents-shared>
+
+<share-documents-request-sharing-stopped xmlns="http://api.digipost.no/schema/datatypes"/>
 
 <signedDocument xmlns="http://api.digipost.no/schema/datatypes">
     <document-issuer>Bedrift AS</document-issuer>

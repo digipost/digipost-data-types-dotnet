@@ -6,7 +6,7 @@
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>..\signingkey.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Core</RootNamespace>
@@ -41,6 +41,7 @@
 
     <ItemGroup>
       <PackageReference Include="Digipost.Api.Client.Shared" Version="7.0.0" />
+      <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(Configuration)' == 'Debug'">
@@ -57,7 +58,7 @@
         <EmbeddedResource Include="Resources/XSD/*" />
         <EmbeddedResource Include="Resources/XML/*" />
     </ItemGroup>
-    
+
     <ItemGroup>
         <Compile Include="..\SharedAssemblyInfo.cs">
             <Link>Properties\SharedAssemblyInfo.cs</Link>
@@ -68,5 +69,5 @@
             <Link>signingkey.snk</Link>
         </None>
     </ItemGroup>
-    
+
 </Project>
