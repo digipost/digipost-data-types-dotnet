@@ -140,11 +140,11 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
         [System.Xml.Serialization.XmlEnumAttribute("EN")]
         En,
         
-        [System.Xml.Serialization.XmlEnumAttribute("NN")]
-        Nn,
-        
         [System.Xml.Serialization.XmlEnumAttribute("NB")]
         Nb,
+        
+        [System.Xml.Serialization.XmlEnumAttribute("NN")]
+        Nn,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.963.0")]
@@ -1521,20 +1521,20 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     public enum Status
     {
         
-        [System.Xml.Serialization.XmlEnumAttribute("UNKNOWN")]
-        Unknown,
-        
         [System.Xml.Serialization.XmlEnumAttribute("DEVIATION")]
         Deviation,
         
-        [System.Xml.Serialization.XmlEnumAttribute("PICKED_UP")]
-        PickedUp,
+        [System.Xml.Serialization.XmlEnumAttribute("READY_FOR_PICKUP")]
+        ReadyForPickup,
         
         [System.Xml.Serialization.XmlEnumAttribute("RETURNED")]
         Returned,
         
-        [System.Xml.Serialization.XmlEnumAttribute("READY_FOR_PICKUP")]
-        ReadyForPickup,
+        [System.Xml.Serialization.XmlEnumAttribute("PICKED_UP")]
+        PickedUp,
+        
+        [System.Xml.Serialization.XmlEnumAttribute("UNKNOWN")]
+        Unknown,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.963.0")]
@@ -2422,20 +2422,12 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.963.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestEvent", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestDocumentsShared", Namespace="http://api.digipost.no/schema/datatypes")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("share-documents-request-event", Namespace="http://api.digipost.no/schema/datatypes")]
-    public partial class ShareDocumentsRequestEvent
+    [System.Xml.Serialization.XmlRootAttribute("share-documents-request-documents-shared", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class ShareDocumentsRequestDocumentsShared
     {
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlElementAttribute("event-type")]
-        public ShareDocumentsRequestEventType EventType { get; set; }
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlElementAttribute("timestamp", DataType="dateTime")]
-        public System.DateTime Timestamp { get; set; }
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         private System.Collections.ObjectModel.Collection<long> _documentIds;
@@ -2462,7 +2454,7 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
             }
         }
         
-        public ShareDocumentsRequestEvent()
+        public ShareDocumentsRequestDocumentsShared()
         {
             this._documentIds = new System.Collections.ObjectModel.Collection<long>();
         }
@@ -2470,14 +2462,11 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.963.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestEventType", Namespace="http://api.digipost.no/schema/datatypes")]
-    public enum ShareDocumentsRequestEventType
+    [System.Xml.Serialization.XmlTypeAttribute("shareDocumentsRequestSharingStopped", Namespace="http://api.digipost.no/schema/datatypes")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRootAttribute("share-documents-request-sharing-stopped", Namespace="http://api.digipost.no/schema/datatypes")]
+    public partial class ShareDocumentsRequestSharingStopped
     {
-        
-        [System.Xml.Serialization.XmlEnumAttribute("SHARING_STOPPED")]
-        SharingStopped,
-        
-        [System.Xml.Serialization.XmlEnumAttribute("FILES_SHARED")]
-        FilesShared,
     }
 }

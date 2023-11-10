@@ -77,8 +77,8 @@ namespace Digipost.Api.Client.DataTypes.Tests
         [Fact]
         public void ShareDocumentRequestEvent()
         {
-            var shareDocumentsRequest = new StoppedShareDocumentsRequestEvent();
-            Assert.Contains("SHARING_STOPPED", shareDocumentsRequest.ToXmlString());
+            var shareDocumentsRequest = new ShareDocumentsRequestSharingStopped();
+            Assert.Contains(shareDocumentsRequest.ToXmlString(), _xmlExamples);
         }
 
         [Fact]
