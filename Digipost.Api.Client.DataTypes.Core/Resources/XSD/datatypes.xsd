@@ -490,6 +490,7 @@
     <xs:sequence>
       <xs:element name="max-share-duration-seconds" type="xs:long"/>
       <xs:element name="purpose" type="xs:string"/>
+      <xs:element maxOccurs="10" minOccurs="0" name="allowed-origin-organisation-numbers" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 

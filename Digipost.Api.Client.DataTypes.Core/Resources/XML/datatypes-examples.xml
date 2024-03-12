@@ -394,6 +394,7 @@
 <share-documents-request xmlns="http://api.digipost.no/schema/datatypes">
     <max-share-duration-seconds>1209600</max-share-duration-seconds>
     <purpose>We require to see your latest pay slip in order to grant you a loan.</purpose>
+    <allowed-origin-organisation-numbers>984661185</allowed-origin-organisation-numbers>
 </share-documents-request>
 
 <share-documents-request-documents-shared xmlns="http://api.digipost.no/schema/datatypes">
