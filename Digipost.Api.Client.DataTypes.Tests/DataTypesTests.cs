@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -70,7 +71,7 @@ namespace Digipost.Api.Client.DataTypes.Tests
         [Fact]
         public void ShareDocumentRequest()
         {
-            var shareDocumentsRequest = new ShareDocumentsRequest(1209600L, "We require to see your latest pay slip in order to grant you a loan.");
+            var shareDocumentsRequest = new ShareDocumentsRequest(1209600L, "We require to see your latest pay slip in order to grant you a loan.", ["984661185"]);
             Assert.Contains(shareDocumentsRequest.ToXmlString(), _xmlExamples);
         }
 

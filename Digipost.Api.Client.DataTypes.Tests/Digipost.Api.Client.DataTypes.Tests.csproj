@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>Digipost.Api.Client.DataTypes.Tests</RootNamespace>
         <AssemblyName>Digipost.Api.Client.DataTypes.Tests</AssemblyName>
         <ProjectGuid>{8814CB98-13B3-4CDF-A081-D1470F80D38B}</ProjectGuid>

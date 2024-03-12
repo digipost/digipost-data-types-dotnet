@@ -2418,6 +2418,36 @@ namespace Digipost.Api.Client.DataTypes.Core.Internal
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("purpose")]
         public string Purpose { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        private System.Collections.ObjectModel.Collection<string> _allowedOriginOrganisationNumbers;
+        
+        [System.Xml.Serialization.XmlElementAttribute("allowed-origin-organisation-numbers")]
+        public System.Collections.ObjectModel.Collection<string> AllowedOriginOrganisationNumbers
+        {
+            get
+            {
+                return _allowedOriginOrganisationNumbers;
+            }
+            private set
+            {
+                _allowedOriginOrganisationNumbers = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AllowedOriginOrganisationNumbersSpecified
+        {
+            get
+            {
+                return (this.AllowedOriginOrganisationNumbers.Count != 0);
+            }
+        }
+        
+        public ShareDocumentsRequest()
+        {
+            this._allowedOriginOrganisationNumbers = new System.Collections.ObjectModel.Collection<string>();
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.963.0")]
