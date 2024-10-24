@@ -15,7 +15,6 @@ namespace Digipost.Api.Client.DataTypes.Core
         public Language Language { get; set; }
         public List<Info> Infos { get; }
         public string SubTitle { get; set; }
-
         public ExternalLink Link { get; set; }
 
         public Appointment(DateTime startTime)
