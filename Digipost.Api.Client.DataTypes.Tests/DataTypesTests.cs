@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -8,10 +7,21 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using Digipost.Api.Client.DataTypes.Core;
-using Digipost.Api.Client.DataTypes.Core.Common;
 using Digipost.Api.Client.Shared.Resources.Resource;
 using Digipost.Api.Client.Shared.Resources.Xml;
 using Xunit;
+using Address = Digipost.Api.Client.DataTypes.Core.Common.Address;
+using Appointment = Digipost.Api.Client.DataTypes.Core.Appointment;
+using ExternalLink = Digipost.Api.Client.DataTypes.Core.ExternalLink;
+using Boligdetaljer = Digipost.Api.Client.DataTypes.Core.Boligdetaljer;
+using Info = Digipost.Api.Client.DataTypes.Core.Common.Info;
+using Inkasso = Digipost.Api.Client.DataTypes.Core.Inkasso;
+using Invoice = Digipost.Api.Client.DataTypes.Core.Invoice;
+using Language = Digipost.Api.Client.DataTypes.Core.Common.Language;
+using Payslip = Digipost.Api.Client.DataTypes.Core.Payslip;
+using ShareDocumentsRequest = Digipost.Api.Client.DataTypes.Core.ShareDocumentsRequest;
+using ShareDocumentsRequestSharingStopped = Digipost.Api.Client.DataTypes.Core.ShareDocumentsRequestSharingStopped;
+using SignedDocument = Digipost.Api.Client.DataTypes.Core.SignedDocument;
 
 namespace Digipost.Api.Client.DataTypes.Tests
 {
@@ -59,19 +69,21 @@ namespace Digipost.Api.Client.DataTypes.Tests
         [Fact]
         public void ExternalLink()
         {
-            var externalLink = new ExternalLink(new Uri("https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/"))
-            {
-                Deadline = DateTime.Parse("2017-09-30T13:37:00+02:00"),
-                ButtonText = "Svar på barnehageplass",
-                Description = "Oslo Kommune ber deg akseptere eller avslå tilbudet om barnehageplass."
-            };
+            var externalLink =
+                new ExternalLink(new Uri("https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/"))
+                {
+                    Deadline = DateTime.Parse("2017-09-30T13:37:00+02:00"),
+                    ButtonText = "Svar på barnehageplass",
+                    Description = "Oslo Kommune ber deg akseptere eller avslå tilbudet om barnehageplass."
+                };
             Assert.Contains(externalLink.ToXmlString(), _xmlExamples);
         }
 
         [Fact]
         public void ShareDocumentRequest()
         {
-            var shareDocumentsRequest = new ShareDocumentsRequest(1209600L, "We require to see your latest pay slip in order to grant you a loan.", ["984661185"]);
+            var shareDocumentsRequest = new ShareDocumentsRequest(1209600L,
+                "We require to see your latest pay slip in order to grant you a loan.", ["984661185"]);
             Assert.Contains(shareDocumentsRequest.ToXmlString(), _xmlExamples);
         }
 
@@ -131,7 +143,11 @@ namespace Digipost.Api.Client.DataTypes.Tests
                 },
                 Language = Language.NN,
                 SubTitle = "Undersøke smerter i ryggen",
-                Infos = { new Info("Informasjon om Oslo City Røntgen", "Oslo City Røntgen er et spesialistsenter for avansert bildediagnostikk.") },
+                Infos =
+                {
+                    new Info("Informasjon om Oslo City Røntgen",
+                        "Oslo City Røntgen er et spesialistsenter for avansert bildediagnostikk.")
+                },
                 Link = new ExternalLink(new Uri("https://www.oslo.kommune.no/barnehage/svar-pa-tilbud-om-plass/"))
                 {
                     Deadline = DateTime.Parse("2017-09-30T13:37:00+02:00"),
@@ -145,6 +161,73 @@ namespace Digipost.Api.Client.DataTypes.Tests
         }
 
         [Fact]
+        public void Boligdetaljer()
+        {
+            var residence = new Residence(new ResidenceAddress()
+            {
+                HouseNumber = "23",
+                StreetName = "Storgata",
+                PostalCode = "0011",
+                City = "Oslo"
+            })
+            {
+                Matrikkel = new Matrikkel("0301", "208", "630")
+                {
+                    Festenummer = "0",
+                    Seksjonsnummer = "0"
+                },
+                Source = "boligmappa",
+                ExternalId = "externalId"
+            };
+
+            var boligdetaljer = new Boligdetaljer(residence)
+            {
+                Hjemmelshavers =
+                {
+                    new Hjemmelshaver()
+                    {
+                        Name = "Gunnar Gunnersen",
+                        Email = "gunnargunnar@gunn.ar"
+                    }
+                },
+                Omsetningshistorikks =
+                {
+                    new Omsetningshistorikk("2017-07-27T10:00:00+02:00")
+                    {
+                        Beskrivelse = "Privat salg av sekundærbolig",
+                        Selger = "Bill Isalg",
+                        Kjoeper = "Cooper Coopersen",
+                        Beloep = 12345678L
+                    }
+                },
+                Heftelses =
+                {
+                    new Heftelse()
+                    {
+                        Panthaver = "TNT ASA",
+                        TypePant = "Pantedokument",
+                        Beloep = "3000000000"
+                    }
+                },
+                Bruksareal = 59,
+                AntallOppholdsrom = 3,
+                AntallBaderom = 4,
+                Organisasjonsnummer = "123456789",
+                Bruksenhet = "H1337",
+                Andelsnummer = "42",
+                CallToAction = new ExternalLink(new Uri("https://www.example.com"))
+                {
+                    Description = "Gå til avsenders side for å gjøre en handling",
+                    ButtonText = "Ta meg til handling!"
+                },
+                Language = Language.NN
+            };
+            
+            Assert.Contains(boligdetaljer.ToXmlString(), _xmlExamples);
+        }
+
+
+        [Fact]
         public void Payslip()
         {
             var payslip = new Payslip();
@@ -154,7 +237,8 @@ namespace Digipost.Api.Client.DataTypes.Tests
         [Fact]
         public void SignedDocument()
         {
-            var signedDocument = new SignedDocument("Bedrift AS", "Ansettelseskontrakt", DateTime.Parse("2018-07-11T10:00:00+02:00"));
+            var signedDocument = new SignedDocument("Bedrift AS", "Ansettelseskontrakt",
+                DateTime.Parse("2018-07-11T10:00:00+02:00"));
 
             Assert.Contains(signedDocument.ToXmlString(), _xmlExamples);
         }
@@ -183,7 +267,8 @@ namespace Digipost.Api.Client.DataTypes.Tests
                 string typeName = child.Name.Replace("-", "").ToUpper();
                 int index = DataTypes.FindIndex(t => t.Name.ToUpper() == typeName);
 
-                XmlRootAttribute rootAtt = Attribute.GetCustomAttribute(DataTypes[index], typeof (XmlRootAttribute)) as XmlRootAttribute;
+                XmlRootAttribute rootAtt =
+                    Attribute.GetCustomAttribute(DataTypes[index], typeof(XmlRootAttribute)) as XmlRootAttribute;
 
                 XmlSerializer serializer = new XmlSerializer(DataTypes[index], rootAtt);
                 XmlReader xmlReader = new XmlNodeReader(child);
@@ -228,6 +313,7 @@ namespace Digipost.Api.Client.DataTypes.Tests
                 {
                     serializer.Serialize(xmlWriter, value);
                 }
+
                 return textWriter.ToString();
             }
         }
@@ -237,11 +323,11 @@ namespace Digipost.Api.Client.DataTypes.Tests
             public override Encoding Encoding => Encoding.UTF8;
         }
 
-        public static string ToNormalizedString(XmlDocument doc )
+        public static string ToNormalizedString(XmlDocument doc)
         {
             var stringWriter = new StringWriter(new StringBuilder());
-            var xmlTextWriter = new XmlTextWriter(stringWriter) {Formatting = Formatting.None};
-            doc.Save( xmlTextWriter );
+            var xmlTextWriter = new XmlTextWriter(stringWriter) { Formatting = Formatting.None };
+            doc.Save(xmlTextWriter);
             return stringWriter.ToString();
         }
     }

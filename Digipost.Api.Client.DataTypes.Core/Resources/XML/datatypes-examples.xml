@@ -66,11 +66,11 @@
         <beloep>3000000000</beloep>
     </heftelser>
     <callToAction>
-        <url>https://www.example.com</url>
+        <url>https://www.example.com/</url>
         <description>Gå til avsenders side for å gjøre en handling</description>
         <button-text>Ta meg til handling!</button-text>
     </callToAction>
-    <language>NB</language>
+    <language>NN</language>
 </boligdetaljer>
 
 <event xmlns="http://api.digipost.no/schema/datatypes">
