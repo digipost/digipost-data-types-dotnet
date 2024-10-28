@@ -40,7 +40,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Digipost.Api.Client.Shared" Version="7.0.0" />
+      <PackageReference Include="Digipost.Api.Client.Shared" Version="7.1.5" />
       <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     </ItemGroup>
 

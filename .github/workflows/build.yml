@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: digipost/set-timezone@v2.0
+    - uses: digipost/set-timezone@v3
       with:
         timezoneLinux: "Europe/Oslo"
 
     - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.x
     - name: Print openssl version
