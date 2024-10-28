@@ -42,5 +42,5 @@ jobs:
       run: dotnet pack -p:PackageVersion=$RELEASE_VERSION -p:AssemblyVersion=$ASSEMBLY_VERSION --configuration Release --no-build --output digipost/packed Digipost.Api.Client.DataTypes.Core
     - name: Push to NuGet
       env:
-        NUGET_API_KEY: ${{ secrets.nugetApiKey }}
+        NUGET_API_KEY: ${{ secrets.NUGETAPIKEY }}
       run: dotnet nuget push digipost/packed/ --source https://api.nuget.org/v3/index.json --api-key $NUGET_API_KEY
