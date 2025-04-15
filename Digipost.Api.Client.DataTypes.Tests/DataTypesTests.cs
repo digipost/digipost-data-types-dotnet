@@ -161,6 +161,29 @@ namespace Digipost.Api.Client.DataTypes.Tests
         }
 
         [Fact]
+        public void Residence()
+        {
+            var residence = new Residence(new ResidenceAddress()
+            {
+                HouseNumber = "23",
+                StreetName = "Storgata",
+                PostalCode = "0011",
+                City = "Oslo"
+            })
+            {
+                Matrikkel = new Matrikkel("0301", "208", "630")
+                {
+                    Festenummer = "0",
+                    Seksjonsnummer = "0"
+                },
+                Source = "boligmappa",
+                ExternalId = "externalId"
+            };
+
+            Assert.Contains(residence.ToXmlString(), _xmlExamples);
+        }
+
+        [Fact]
         public void Boligdetaljer()
         {
             var residence = new Residence(new ResidenceAddress()
